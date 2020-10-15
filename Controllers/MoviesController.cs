@@ -19,6 +19,7 @@ namespace Vidly.Controllers
             _context = new ApplicationDbContext();
         }
 
+        // Create (Loads New Form -- Does not create anything)
         public ViewResult New()
         {
             var genres = _context.Genres.ToList();
@@ -31,22 +32,7 @@ namespace Vidly.Controllers
             return View("MovieForm", viewModel);
         }
 
-        public ActionResult Edit(int id)
-        {
-            var movie = _context.Movies.SingleOrDefault(c => c.Id == id);
-
-            if (movie == null)
-                return HttpNotFound();
-
-            var viewModel = new MovieFormViewModel
-            {
-                Movie = movie,
-                Genres = _context.Genres.ToList()
-            };
-
-            return View("MovieForm", viewModel);
-        }
-
+        // Create / Update
         [HttpPost]
         public ActionResult Save(Movie movie)
         {
@@ -69,11 +55,7 @@ namespace Vidly.Controllers
             return RedirectToAction("Index", "Movies");
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            _context.Dispose();
-        }
-
+        // Read (All Movies)
         public ViewResult Index()
         {
             var movies = _context.Movies.Include(m => m.Genre).ToList();
@@ -81,6 +63,7 @@ namespace Vidly.Controllers
             return View(movies);
         }
 
+        // Read (Details)
         public ActionResult Details(int id)
         {
             var movie = _context.Movies.Include(m => m.Genre).SingleOrDefault(m => m.Id == id);
@@ -91,6 +74,24 @@ namespace Vidly.Controllers
             return View(movie);
         }
 
+        // Read (Loads Edit Page)
+        public ActionResult Edit(int id)
+        {
+            var movie = _context.Movies.SingleOrDefault(c => c.Id == id);
+
+            if (movie == null)
+                return HttpNotFound();
+
+            var viewModel = new MovieFormViewModel
+            {
+                Movie = movie,
+                Genres = _context.Genres.ToList()
+            };
+
+            return View("MovieForm", viewModel);
+        }
+
+        // Read (Random)
         public ActionResult Random()
         {
             var movie = new Movie() { Name = "Shrek!" };
@@ -110,30 +111,16 @@ namespace Vidly.Controllers
             return View(viewModel);
         }
 
+        // Read (By Release Year)
         [Route("movies/released/{year:regex(\\d{4})}/{month:regex(\\d{2}):range(1, 12)}")]
         public ActionResult ByReleaseYear(int year, int month)
         {
             return Content(year + "/" + month);
         }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
     }
-
-    // Types of Action Results
-    // Type                     Helper Method
-    // ViewResult               View()
-    // PartialViewResult        PartialView()
-    // ContentResult            Content()
-    // RedirectResult           Redirect()
-    // RedirectToRouteResult    RedirectToAction()
-    // JsonResult               Json()
-    // FileResult               File()
-    // HttpNotFoundResult       HttpNotFound()
-    // EmptyResult
-
-    // return new ViewResult();
-    // return new ViewResult();
-
-    //return Content("HelloWorld!");
-    //return HttpNotFound();
-    //return new EmptyResult();
-    //return RedirectToAction("Index", "Home", new { page = 1, sortBy = "name" });
 }
