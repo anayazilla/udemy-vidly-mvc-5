@@ -1,20 +1,20 @@
-**______________________________________________________________________**
-#REPOSITORY: udemy-vidly-mvc-5
-#FOR: The Complete ASP.NET MVC5 Course
-**______________________________________________________________________**
+---
+# REPOSITORY: udemy-vidly-mvc-5
+# FOR: The Complete ASP.NET MVC5 Course
+---
 
 This is my personal progress work on Udemy: The Complete ASP.NET MVC 5 Course by Mosh Hamedani. I started this course on 10/13/2020 to build up some knowledge for a project at work.
 
-**______________________________________________________________________**
-##Resources
+---
+## Resources
 
 [The Complete ASP.NET MVC Course](https://www.udemy.com/course/the-complete-aspnet-mvc-5-course)
 
 [Mosh Hamedani on GitHub](https://github.com/mosh-hamedani)
 
-**______________________________________________________________________**
-##Section 1: Getting Started
-####Quiz Questions and Answers...
+---
+## Section 1: Getting Started
+#### Quiz Questions and Answers...
 
 **Question 1:** What is the role of a controller in MVC architectural pattern?
 
@@ -51,8 +51,8 @@ It's independent of the UI
 It's independent of persistence
 ALL OF THE ABOVE
 
-**______________________________________________________________________**
-##Section 2: ASP.NET MVC Fundamentals
+---
+## Section 2: ASP.NET MVC Fundamentals
 
 Learned about:
 - Action Results
@@ -61,7 +61,7 @@ Learned about:
 - Attribute Routing
 - Razor Views
 
-###Types of Action Results
+### Types of Action Results
 >Type                     Helper Method
 ViewResult               View()
 PartialViewResult        PartialView()
@@ -82,8 +82,8 @@ return RedirectToAction("Index", "Home", new { page = 1, sortBy = "name" });
 
 Instead of a quiz, we had an exercise. :star: **My results should be the initial commit in this repository**. :star:
 
-**______________________________________________________________________**
-##Section 3: Working with Data
+---
+## Section 3: Working with Data
 
 - Code-First Migrations
 - Seeding the Database
@@ -91,8 +91,8 @@ Instead of a quiz, we had an exercise. :star: **My results should be the initial
 - Querying Objects
 - Eager Loading
 
-**______________________________________________________________________**
-##Section 4: Building Forms
+---
+## Section 4: Building Forms
 
 >try { _context.SaveChanges(); }
 catch (DbEntityValidationException e) { Console.WriteLine(e); }
@@ -105,8 +105,8 @@ catch (DbEntityValidationException e) { Console.WriteLine(e); }
 - Adding data
 - Updating data
 
-**______________________________________________________________________**
-##Section 5: Validation
+---
+## Section 5: Validation
 
 **Three Steps**
 1. Add Data Annotations
@@ -130,8 +130,8 @@ catch (DbEntityValidationException e) { Console.WriteLine(e); }
 - Client-side Validation
 - Anti-forgery Tokens
 
-**______________________________________________________________________**
-##Section 6: Building RESTful Services with ASP.NET Web API
+---
+## Section 6: Building RESTful Services with ASP.NET Web API
 
 **Before working with external APIs**, test the API with Postman extension to see if you can send requests to it.
 
@@ -141,13 +141,20 @@ catch (DbEntityValidationException e) { Console.WriteLine(e); }
 
 **AutoMapper**, but really, don't have to worry about it.
 
-**______________________________________________________________________**
-##Section 7: Client-side Development
+**Summary**
+- Postman Chrome Extension
+- Data Transfer Objects (DTOs)
+- AutoMapper
+- Action Results
+- Camel Notation
+
+---
+## Section 7: Client-side Development
 
 
 
 
 
 
-**______________________________________________________________________**
+---
 *<EOF>*
