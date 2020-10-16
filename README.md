@@ -1,9 +1,13 @@
----
 # REPOSITORY: udemy-vidly-mvc-5
-# FOR: The Complete ASP.NET MVC5 Course
+#### FOR: The Complete ASP.NET MVC5 Course
+
 ---
 
-This is my personal progress work on Udemy: The Complete ASP.NET MVC 5 Course by Mosh Hamedani. I started this course on 10/13/2020 to build up some knowledge for a project at work.
+This is my personal progress work on Udemy's **[The Complete ASP.NET MVC Course by Mosh Hamedani](https://www.udemy.com/course/the-complete-aspnet-mvc-5-course)**. I started this course on 10/13/2020 to build up some knowledge for a project at work.
+
+It had been about 5 years since I had last done MVC, and I only kind of knew what I was doing back then. This course was pretty great, and helped me hit the ground running in the middle of project that was already on :fire: fire :fire:. I gave it 5 stars. Highly recommended. It's not 100% a beginner course -- you do need to have *some* background in development.
+
+:star: :star: :star: :star: :star: 
 
 ---
 ## Resources
